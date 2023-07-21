@@ -1,0 +1,19 @@
+package com.example.demo.controller;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@CrossOrigin("*")
+@RestController
+public class DemoController {
+
+	
+	@PostMapping("demo/{id}/{password}")
+	public void demo(@PathVariable int id , @PathVariable String password) {
+		
+		System.out.println(id);
+		System.out.println(password);
+	}
+}
